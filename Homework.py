@@ -18,7 +18,7 @@ for i in range(0, len(li), 2):
         break
     li[i], li[i + 1] = li[i + 1], li[i]
 
-print(f'Соседние значения списка изменены: {" ".join(li)}', end='\n' * 2)
+print(f'Соседние значения списка поменялись местами: {" ".join(li)}', end='\n' * 2)
 
 
 #_____________________ Задание 3 (Определяем время года через список и словарь)
@@ -58,7 +58,7 @@ print()
 #_____________________ Задание 5 (Структура "Рейтинг")
 print('Задание №5 ↓')
 my_list = [7, 5, 3, 3, 2]
-number = int(input('Введите число: '))
+number = int(input('Введите число, оно будет добавлено в рейтинговую систему "7 5 3 3 2": '))
 
 for i in range(len(my_list)):
     if number > my_list[i]:
@@ -71,7 +71,7 @@ for i in range(len(my_list)):
         break
     elif my_list[i] >= number > my_list[i + 1]:
         my_list.insert(i + 1, number)
-        print(f'Число вставлено в {i}-й элемент. Результат: ', end='')
+        print(f'Число вставлено после {i + 1}-о элемента. Результат: ', end='')
         break
 print(*my_list, end='\n' * 2)
 

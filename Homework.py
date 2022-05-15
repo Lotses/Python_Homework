@@ -58,12 +58,22 @@
 # print()
 
 # #_____________________ Задание 5 (Структура "Рейтинг")
-# print('Задание №6 ↓')
+# print('Задание №5 ↓')
 # my_list = [7, 5, 3, 3, 2]
 # number = int(input('Введите число: '))
 #
 # for i in range(len(my_list)):
-#
+#     if number > my_list[i]:
+#         my_list.insert(i, number)
+#         break
+#     elif i + 1 == len(my_list):
+#         my_list.append(number)
+#         break
+#     elif my_list[i] >= number > my_list[i + 1]:
+#         my_list.insert(i + 1, number)
+#         break
+# print(*my_list)
+# print()
 
 #_____________________ Задание 6 ()
 print('Задание №6 ↓')

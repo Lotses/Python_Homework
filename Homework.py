@@ -90,5 +90,14 @@ while terminate == 'да':
     goods_dict['ед'] = input('Введите единицу измерения товара: ')
     goods_list.append((i, goods_dict.copy()))
     terminate = input(f'Вы ввели товаров: {i}, хотите продолжить? да/нет: ').lower()
-
-# print(*goods_list, sep='\n')
+print(f'{"_" * 25}Таблица товаров имеет следующий вид:{"_" * 25}')
+print(*goods_list, sep='\n')
+                # выводим аналитику
+goods_dict.clear()
+goods_dict['название'] = [goods_list[i][1]['название'] for i in range(i)]
+goods_dict['цена'] = [goods_list[i][1]['цена'] for i in range(i)]
+goods_dict['количество'] = [goods_list[i][1]['количество'] for i in range(i)]
+goods_dict['ед'] = list(set([goods_list[i][1]['ед'] for i in range(i)]))
+print(f'{"_" * 25}Данные для аналитики:{"_" * 40}')
+for key, values in goods_dict.items():
+    print(f'{key} : {values}')
